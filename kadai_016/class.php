@@ -31,8 +31,5 @@ class Animal {
 $animal= new Animal('dog', 60, 5000);
 print_r($animal);
 
-$food->show_price(250);
-$animal->show_height(60);
-
 
 ?>
