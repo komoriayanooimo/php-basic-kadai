@@ -2,8 +2,8 @@
 class Food {
     private $name;
     private $price;
-    public function show_price(int $price) {
-        $this->price = $price;
+    public function show_price() {
+        return $this->price;
     }
     public function __construct(string $name, int $price) {
         $this->name = $name;
@@ -11,15 +11,15 @@ class Food {
     }   
 }
 $food = new Food('potato', 250);
-print_r($food);
+print_r($food->show_price());
 echo '<br>';
 
 class Animal {
     private $name;
     private $height;
     private $weight;
-    public function show_height(int $height) {
-        $this->height = $height;
+    public function show_height() {
+        return $this->height;
     }
     public function __construct(string $name, int $height, int $weight) {
             $this->name = $name; 
@@ -29,7 +29,8 @@ class Animal {
 }
 
 $animal= new Animal('dog', 60, 5000);
-print_r($animal);
+print_r($animal->show_height());
 
-
+$food->show_price();
+$animal->show_height();
 ?>
