@@ -7,13 +7,9 @@ class Food {
     }
     public function __construct(string $name, int $price) {
         $this->name = $name;
-        $this->price =$price;
+        $this->price = $price;
     }   
 }
-$food = new Food('potato', 250);
-print_r($food->show_price());
-echo '<br>';
-
 class Animal {
     private $name;
     private $height;
@@ -27,10 +23,15 @@ class Animal {
             $this->weight = $weight;
     }     
 }
-
-$animal= new Animal('dog', 60, 5000);
+$food = new Food('potato', 250);
+$animal = new Animal('dog', 60, 5000);
+print_r($food);
+echo '<br>';
+print_r($animal);
+echo '<br>';
+print_r($food->show_price());
+echo '<br>';
 print_r($animal->show_height());
+echo '<br>';
 
-$food->show_price();
-$animal->show_height();
 ?>
